@@ -1,0 +1,162 @@
+##DEKLARASI VARIABEL
+
+usernameGuru = "guru"
+passGuru = "123"
+
+usernameMurid = "murid"
+passMurid = "321"
+
+soalPilGan = []
+jawabanPilGan = []
+penjelasanPilGan = []
+
+soalEsai = []
+jawabanEsai = []
+penjelasanEsai = []
+
+##FUNGSI-FUNGSI
+
+function login():
+    a = input("Masukkan Username : ")
+    b = input("Masukkan Password : ")
+    if a == "guru" and b == "123":
+        adminPage()
+    elif b == "murid" and b == "321":
+        userPage()
+
+function adminPage():
+    print("1. Buat Soal")
+    print("2. Hapus Soal")
+    print("3. Kembali")
+    a = input("Pilih Menu: ")
+    if a == '1':
+        buatSoal()
+    elif a == '2':
+        hapusSoal()
+    elif a == '3':
+        login()
+
+function buatSoal():
+    print("1. Pilihan Ganda")
+    print("2. Essai")
+    print("3. Kembali")
+    a = input("Pilih Jenis Soal: ")
+    if a == '1':
+        formPilGan()
+    elif a == '2':
+        formEssai()
+    elif a == '3':
+        adminPage()
+    
+function formPilGan():
+    input(soal, jawaban, penjelasan)
+    a = input("Submit?(y/n)")
+    if a == 'y':
+        adminPage()
+
+function formPilGan():
+    input(soal, jawaban, penjelasan)
+    a = input("Submit?(y/n)")
+    if a == 'y':
+        adminPage()
+
+function hapusSoal():
+    print("1. Pilihan Ganda")
+    print("2. Essai")
+    print("3. Kembali")
+    a = input("Pilih Jenis Soal yang ingin dihapus: ")
+    if a == '1':
+        hapusPilGan()
+    elif a == '2':
+        hapusEssai()
+    elif a == '3':
+        adminPage()
+
+function hapusPilGan():
+    for i in soal:
+        print(soal[i])
+    a = input('Pilih ID yang ingin dihapus')
+    del soal[a]
+    del jawaban[a]
+    del penjelasan[a]
+
+function hapusEssai():
+    for i in soal:
+        print(soal[i])
+    a = input('Pilih ID yang ingin dihapus')
+    del soal[a]
+    del jawaban[a]
+    del penjelasan[a]
+
+function userPage():
+    print("1. Bahasa Indonesia")
+    print("2. Bahasa Inggris")
+    print("3. Matematika")
+    print("4. Kembali")
+    a = input("Pilih pelajaran")
+    if a == '1':
+        pilihJudulbin()
+    elif a == '2':
+        pilihJudulbing()
+    elif a == '3':
+        pilihJudulmtk()
+    elif a == '4':
+        login()
+
+function pilihJudulbin():
+    for i in soal:
+        print(soal[i]\n)
+    a = input("Pilih ID soal: ")
+    if a == '1':
+        kerjakanSoal()
+        return a
+    elif a == '2':
+        kerjakanSoal()
+        return a
+    else:
+        print("salah")
+        
+function pilihJudulbing()
+    for i in soal:
+        print(soal[i]\n)
+    a = input("Pilih ID soal: ")
+    if a == '1':
+        kerjakanSoal()
+        return a
+    elif a == '2':
+        kerjakanSoal()
+        return a
+    else:
+        print("salah")
+
+function pilihJudulmtk():
+    for i in soal:
+        print(soal[i]\n)
+    a = input("Pilih ID soal: ")
+    if a == '1':
+        kerjakanSoal()
+        return a
+    elif a == '2':
+        kerjakanSoal()
+        return a
+    else:
+        print("salah")
+
+function kerjakanSoal():
+    for i in soal:
+        print(soal[i])
+    a = input("Jawaban:")
+    jawabanUser = input("kumpulkan(y/n):")
+    if b == 'y':
+        submit()
+    else:
+        print("salah!")
+
+function submit():
+    nilai = 0
+    for i in jawaban:
+        if jawabanUser == jawaban[i]:
+            nilai += 100//len(soal)
+
+main():
+    login()
